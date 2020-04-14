@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>How to Get There</title>
+</head>
+
+<body style="background-color:LEMONCHIFFON;">
+<body>
+	<nav>
+	<a href = "index.html">Home</a>
+	<a href = "images.html">What to do there</a>
+	<a href = "direction.html">How to get there</a>
+	<a href = "phone.html">Contact Us</a>
+	</nav>
+
+<img src="https://www.nparks.gov.sg/-/media/nparks-real-content/gardens-parks-and-nature/sg-botanic-gardens/evolution-garden.jpg
+"  width="1430" height="600">
+<h1 style ="color:Black;font-size:20px;text-align:left"> <u>DIRECTIONS</u> </h1>
+
+<p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7693888240537!2d103.81372491482469!3d1.3138450620558864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1a1c7ddb60bd%3A0xeadf14903ad3d980!2sSingapore%20Botanic%20Gardens!5e0!3m2!1sen!2ssg!4v1586440537254!5m2!1sen!2ssg" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+</p>
+
+<button onclick="getLocation()">Geolocation</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<h2 style ="color:Black;font-size:20px;text-align:left"> <u>Location</u> </h2>
+<p style ="color:Black;font-size:20px;text-align:left"> 
+-Located in central Singapore and just five minutes away (by bus) from Orchard Road.
+</p>
+<p style ="color:Black;font-size:20px;text-align:left"> 
+-Address: 1 Cluny Road, Singapore 259569
+</p>
+</body>
